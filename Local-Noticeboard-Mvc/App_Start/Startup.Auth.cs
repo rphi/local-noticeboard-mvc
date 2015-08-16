@@ -54,9 +54,9 @@ namespace Local_Noticeboard_Mvc
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "1658449891058117",
+               appSecret: "eb7df850111f3410f03efa3808b3b015");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
