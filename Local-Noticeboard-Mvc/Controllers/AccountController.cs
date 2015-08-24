@@ -74,7 +74,7 @@ namespace Local_Noticeboard_Mvc.Controllers
             }
 
             // Require the user to have a confirmed email before they can log on.
-            var user = await UserManager.FindByNameAsync(model.Email);
+            /*var user = await UserManager.FindByNameAsync(model.Email);
             if (user != null)
             {
                 if (!await UserManager.IsEmailConfirmedAsync(user.Id))
@@ -85,7 +85,7 @@ namespace Local_Noticeboard_Mvc.Controllers
                                          + "The confirmation token has been resent to your email account.";
                     return View("Error");
                 }
-            }
+            }*/
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
@@ -124,14 +124,14 @@ namespace Local_Noticeboard_Mvc.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
-                    string callbackUrl = await SendEmailConfirmationTokenAsync(user.Id, "Confirm your account");
+                    /*string callbackUrl = await SendEmailConfirmationTokenAsync(user.Id, "Confirm your account");
 
                     ViewBag.Message = "Check your email and confirm your account, you must be confirmed "
                          + "before you can log in.";
 
-                    return View("Info");
+                    return View("Info");*/
                     
                 }
                 AddErrors(result);

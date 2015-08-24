@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses">
+  <DataContextMoniker Name="/DataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="71dd1e78-f221-4c48-9d61-e92f8bbcb0ef" absoluteBounds="3.375, 0.5, 2, 3.1170068359375">
+      <DataClassMoniker Name="/DataClassesDataContext/AspNetUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="401f7f38-f0a1-463c-809b-19cf379bc229" absoluteBounds="3.3899999999999997, 0.96, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="04d84c78-379e-4187-90d7-6ee8d13731f7" absoluteBounds="1, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DataClassesDataContext/Post" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fab8f14f-f18a-4692-aade-3c1c7487a660" absoluteBounds="1.0150000000000006, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

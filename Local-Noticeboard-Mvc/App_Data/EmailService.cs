@@ -7,20 +7,19 @@ using SendGrid;
 
 namespace Local_Noticeboard_Mvc.App_Data
 {
-    public class EmailServicee : IIdentityMessageService
+    public class EmailService : IIdentityMessageService
     {
         public async Task SendAsync(IdentityMessage message)
         {
-            await configSendGridasync(message);
+            await ConfigSendGridasync(message);
         }
 
-        // Use NuGet to install SendGrid (Basic C# client lib) 
-        private async Task configSendGridasync(IdentityMessage message)
+        private async static Task ConfigSendGridasync(IdentityMessage message)
         {
             var myMessage = new SendGridMessage();
             myMessage.AddTo(message.Destination);
             myMessage.From = new System.Net.Mail.MailAddress(
-                                "Joe@contoso.com", "Joe S.");
+                                "hello@phippsnet.co", "PhippsNET");
             myMessage.Subject = message.Subject;
             myMessage.Text = message.Body;
             myMessage.Html = message.Body;
